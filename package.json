@@ -1,0 +1,35 @@
+{
+  "name": "mathbot",
+  "version": "1.0.0",
+  "description": "a webhook for dialogflow mathbot sample app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingleashish/webhook-api.ai-mathbot.git"
+  },
+  "keywords": [
+    "dialogflow",
+    "API.ai",
+    "chatbot",
+    "mathbot",
+    "webhook",
+    "sample",
+    "for",
+    "dialogflow",
+    "node js webhook for dialogflow"
+  ],
+  "author": "Ashish Ingle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ingleashish/webhook-api.ai-mathbot/issues"
+  },
+  "homepage": "https://github.com/ingleashish/webhook-api.ai-mathbot#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  }
+}
