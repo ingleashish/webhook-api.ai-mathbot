@@ -1,0 +1,6 @@
+{
+    "name": "Webhook-mathbot-sample",
+    "description": "Webhook mathbot sample",
+    "repository": "https://github.com/ingleashish/webhook-api.ai-mathbot",
+    "keywords": ["api.ai", "dialogflow", "natural language"]
+  }
