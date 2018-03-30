@@ -14,43 +14,16 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/math", function(req, res) {
-
-    var firstNumber = req.body.result.parameters.firstNumber;
-    var secondNumber = req.body.result.parameters.secondNumber;
-    var actionName = req.body.result.metadata.intentName;
-    var responseText;
-
-    if(req.body.result &&
-        req.body.result.parameters &&
-        req.body.result.metadata &&
-        firstNumber && secondNumber && intentName) 
-        {
-            switch (intentName) {
-                case "Add":
-                    responseText = firstNumber + secondNumber;
-                    break;
-                case "Division":
-                    responseText = firstNumber / secondNumber;
-                    break;
-                case "Multiply":
-                    responseText = firstNumber * secondNumber;
-                    break;
-                case "Substract":
-                    responseText = firstNumber - secondNumber;
-                    break;
-            
-                default:
-                    responseText = "Seems like some problem. Speak again.";
-                    break;
-            }
-
-        } else {
-            responseText = "Seems like some problem. Speak again.";
-        }
-  
+  var speech =
+    req.body.result &&
+    req.body.result.parameters &&
+    req.body.result.parameters.firstNumber &&
+    req.body.result.parameters.secondNumber
+      ? (req.body.result.parameters.firstNumber + req.body.result.parameters.secondNumber)
+      : "Seems like some problem. Speak again.";
   return res.json({
-    speech: responseText,
-    displayText: responseText,
+    speech: speech,
+    displayText: speech,
     source: "webhook-mathbot-nodejs-sample"
   });
 });
