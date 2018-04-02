@@ -14,6 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/math", function(req, res) {
+    alert(req.body);
   var speech =
     req.body.result &&
     req.body.result.parameters &&
